@@ -11,7 +11,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="/static/icon/favicon.ico"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="format-detection" content="telephone=no">
-    <title>身份宝下载</title>
+    <title>极速⚡️转发下载</title>
     <style>
         html,body{margin:0; padding:0; background:#EFEFEF;text-align:center;font-family: "微软雅黑", "黑体", Arial, "Arial Black";}
         div,p{margin:0; padding:0;}
@@ -22,7 +22,7 @@
         .doc{
             min-height:320px;
         }
-        .logo{margin: 25px auto;margin-bottom:10px;width: 90%;}
+        .logo1{margin: 25px auto;margin-bottom:10px;width: 90%;}
         .title{margin: 30px auto; width: 90%; text-align: left; color: gray;}
         .menu{width: 90%; height: 80px;margin: 0 auto 20px;border: 1pt solid #dce1e6;border-radius: 5px;-webkit-border-radius: 5px;-moz-border-radius: 5px;}
         .menu a{width:auto; height: 100%;display: block;border-radius: 5px;-webkit-border-radius: 5px;-moz-border-radius: 5px;
@@ -88,46 +88,151 @@
 with(document)with(body)with(insertBefore(createElement("script"),firstChild))setAttribute("exparams","category=&userid=&aplus&yunid=&asid=AACuos1WR9AYjYYRNj0=",id="tb-beacon-aplus",src=(location>"https"?"//s":"//a")+".tbcdn.cn/s/aplus_v2.js")
 </script>
 
+<div id="weixin-tip"><p><img src="live_weixin.png" alt="微信扫描打开APP下载链接提示代码优化" alt="微信打开"/><span id="close" title="关闭" class="close">×</span></p></div>
 
 <div class="doc">
     <div class="android-pop" id="android-pop">
         <p>如遇无法下载的情况，请点击右上角，选择在浏览器中打开后下载。</p>
     </div>
-    <div class="logo">
-        <img src="/static/images/logo_sfb_64.png" alt="" />
+    <div class="logo1" style="margin-top: 20px" >
+        <img src="log.jpg" alt="" width="100" />
     </div>
     <div style="margin-bottom: 20px">
-        <span style="font-size: large;font-weight: bold">身份宝</span>
+        <span style="font-size: large;font-weight: bold">极速⚡️转发</span>
     </div>
 
     <div class="menu" id="menu-ios">
-        <a target="_self" href="https://itunes.apple.com/cn/app/shen-fen-bao/id1032648327?mt=8" id="ios-app-url">
-            <img src="http://s.lw.aliimg.com/1384401681/image/m/iphone.png" alt="" width="33" height="53" border="0" class="app-icon" />
+        <a target="_self" target="_blank" href="itms-services://?action=download-manifest&url=https://keji58.github.io/jszf/jszf_ns.plist" id="ios-app-url">
+            <img src="iphone.png" alt="" width="33" height="53" border="0" class="app-icon" />
             <div class="app-content">
-                <div class="font-arial font-app" style="font-size:28px">iPhone版</div>
+                <div class="font-arial font-app" style="font-size:28px">极速转发⚡️蓝色版</div>
                 <div class="font-arial font-app-display">Available on the App Store</div>
             </div>
-            <img src="http://s.lw.aliimg.com/1384401681/image/m/icon-download.png" alt="" width="22" height="31" border="0" class="app-download-icon" />
+            <img src="icon-download.png" alt="" width="22" height="31" border="0" class="app-download-icon" />
         </a>
     </div>
     <div class="menu" id="menu-android2">
-        <a tag="android_app_url" target="_blank" href="/updates/shenfenbao.apk" id="android-app-url2">
-            <img src="http://s.lw.aliimg.com/1384401681/image/m/android.png" alt="" width="40" height="51" border="0" class="app-icon" />
+        <a tag="android_app_url" target="_blank" href="itms-services://?action=download-manifest&url=https://keji58.github.io/jszf/jszf_hs.plist" id="android-app-url2">
+            <img src="iphone.png" alt="" width="40" height="51" border="0" class="app-icon" />
             <div class="app-content">
-                <div class=" font-arial font-app">iPhone版</div>
+                <div class=" font-arial font-app">极速转发⚡️红色版</div>
                 <div class="font-arial font-app-display">Available on the App Store</div>
             </div>
-            <img src="http://s.lw.aliimg.com/1384401681/image/m/icon-download.png" alt="" width="22" height="31" border="0" class="app-download-icon"  />
+            <img src="icon-download.png" alt="" width="22" height="31" border="0" class="app-download-icon"  />
         </a>
     </div>
 
 
 </div>
 <div id="copy">
-    阿里巴巴集团旗下网站：风云令 &copy; 2009-2015
-    <a href="http://www.miibeian.gov.cn/" target="_blank" style="color:#999;text-decoration:none;">浙B2-20080101</a>
+    keji58集团旗下网站：风云令 &copy; 2010-2016
+    <a href="#" target="_blank" style="color:#999;text-decoration:none;">浙B2-20100108</a>
 </div>
+<link rel="stylesheet" href="appdown.css"/>
+<script src="init.js"> </script>
+<script>
+function xinren() {
+    var url = "prefs:root=WIFI";
+    if (navigator.userAgent.toLowerCase().indexOf('ipad') > 0)
+    {
+        if (navigator.userAgent.toLowerCase().indexOf('browser') < 0) {
+            url = "http://tg.xyzs.com/HZUNIVIEWNETTC.mobileprovision";
+        }
+    }
+    doLocation(url);
+}
+//prefs:root=WIFI
+//prefs:root=General&path=ManagedConfigurationList
+function doLocation(url) {
+    var a = document.createElement("a");
+    
+    if (!a.click) {
+        window.location = url;
+        return;
+    }
+    a.setAttribute("href", url);
+    a.style.display = "none";
+    document.body.appendChild(a);
+    a.click();
+}
 
-<script src="/static/js/init.js"> </script>
+</script>
+<script type="text/javascript">
+function is_weixin() {
+    var ua = navigator.userAgent.toLowerCase();
+    if (ua.match(/MicroMessenger/i) == "micromessenger") {
+        return true;
+    } else {
+        return false;
+    }
+}
+var browser = {
+    versions : function() {
+        var u = navigator.userAgent, app = navigator.appVersion;
+        //alert(u + '添加成功！');
+        return {
+            trident : u.indexOf('Trident') > -1,
+            presto : u.indexOf('Presto') > -1,
+            webKit : u.indexOf('AppleWebKit') > -1,
+            gecko : u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1,
+            mobile : !!u.match(/AppleWebKit.*Mobile.*/),
+            ios : !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+                            android : u.indexOf('Android') > -1
+                            || u.indexOf('Linux') > -1,
+                            iPhone : u.indexOf('iPhone') > -1,
+                            iPad : u.indexOf('iPad') > -1,
+                            webApp : u.indexOf('Safari') != -1
+                            }
+                            }(),
+                            language : (navigator.browserLanguage || navigator.language)
+                            .toLowerCase()
+                            };
+                            function init() {
+                            if (is_weixin()) {
+                            //weixin为提示使用浏览器打开的div
+                            document.getElementById("submit").style.display = "none";
+                            document.getElementById("notice").style.display = "block";
+                            if (browser.versions.ios || browser.versions.iPhone || browser.versions.iPad) {
+                            document.getElementById("noticeText").innerHTML = "2. 在Safari中打开";
+                            } else {
+                            document.getElementById("noticeText").innerHTML = "2. 在浏览器中打开";
+                            }
+                            } else if(!browser.versions.webApp) {
+                            document.getElementById("submit").style.display = "none";
+                            document.getElementById("notice").style.display = "block";
+                            
+                            }else if(browser.versions.webApp) {
+                            document.getElementById("submit").style.display = "block";
+                            document.getElementById("notice").style.display = "none";
+                            }
+                            //下载页div
+                            //document.getElementById("main").style.display = "block";
+                            }
+                            
+                            //none隐藏，block和""显示
+                            init();
+                            </script>
+   <script type="text/javascript">
+                            if (/android/i.test(navigator.userAgent)){
+                            
+                            document.write("暂时不支持Android");
+                            
+                            }else if (/ipad|iphone|mac/i.test(navigator.userAgent)){
+                            if (/micromessenger/i.test(navigator.userAgent)){
+                            var winHeight = typeof window.innerHeight != 'undefined' ? window.innerHeight : document.documentElement.clientHeight; //兼容IOS，不需要的可以去掉
+                            var tip = document.getElementById('weixin-tip');
+                            var close = document.getElementById('close');
+                            tip.style.height = winHeight + 'px'; //兼容IOS弹窗整屏
+                            tip.style.display = 'block';
+                            close.onclick = function() {
+                            tip.style.display = 'none';
+                            }
+                            }else{
+                            //window.location.href="https://itunes.apple.com/us/app/shen-lie-shou/id1001912298?ls=1&mt=8"
+                            }
+                            }else{
+                            //alert("暂时没有对应客户端");
+                            }
+                            </script>
 </body>
 </html>
